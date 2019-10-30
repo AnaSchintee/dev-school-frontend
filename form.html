@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Personal information</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="business-card">
+        <form>
+            <h1>Personal information</h1>
+            <p>Note that optional fields are marked accordingly.</p>
+
+            <p>
+                <label>First Name:</label>
+                <input type="text" required minlength="2" maxlength="255" placeholder="First name">
+            </p>
+            <p>
+                <label>Last Name:</label>
+                <input type="text" required minlength="2" maxlength="255" placeholder="Last name">
+            </p>
+            <p>
+                <label>Email:</label>
+                <input type="email" required>
+            </p>
+            <p>
+                <label>Phone:</label>
+                <input type="tel" required>
+            </p>
+            <p>
+                <label>Website URL:</label>
+                <input type="url" maxlength="1000" placeholder="http://">
+                <small>(optional)</small>
+            </p>
+            <p>
+                <label>Age:</label>
+                <input type="number" min=1 max="150" placeholder="Age">
+                <small>(optional)</small>
+            </p>
+            <p>
+                <label>Birth date:</label>
+                <input type="date" required min="1900-01-01" max="2019-10-24" placeholder="Age">
+            </p>
+            <p>
+                <label>Favourite vegetable:</label>
+                <select>
+                    <option>--</option>
+                    <option>Cucumber</option>
+                    <option>Pepper</option>
+                    <option>Cabbage</option>
+                    <option>Spinach</option>
+                </select>
+                <small>(optional)</small>
+            </p>
+            <p>
+                <label>Favourite fruit:</label>
+                <input type="text" list="list-fruit" pattern="[Ss]trawberry|[Ww]atermelon|[Cc]herry|[Oorange]">
+                <small>(optional)</small>
+                <datalist id="list-fruit">
+                    <option>Strawberry</option>
+                    <option>Watermelon</option>
+                    <option>Cherry</option>
+                    <option>Orange</option>
+                </datalist>
+            </p>
+            <p>
+                <label>Favourite color:</label>
+                <input type="color" value="#f6b73c">
+                <small>(optional)</small>
+            </p>
+            <p>
+                <label>Wake Up Time:</label>
+                <input type="time">
+                <small>(optional)</small>
+            </p>
+            <p>
+                <label>Gender:</label><br>
+                <input type="radio" name="gender" value="male" checked> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other"> Other
+                <small>(optional)</small>
+            </p>
+            <button type="reset"><b>Reset</b></button>
+            <button type="submit"><b>Submit</b></button>
+    </div>
+</body>
+
+</html>
