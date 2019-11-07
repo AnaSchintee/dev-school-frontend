@@ -1,0 +1,62 @@
+h1, h2 {
+  color: #002E58;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2, ul, strong {
+  margin-left: 10px;
+}
+
+a {
+  margin-right: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+a[href^="mailto"]::before {
+  content: url(./static/email.png);
+  margin-right: 5px;
+}
+
+a[href^="tel"]::before {
+  content: url(./static/phone.png);
+  margin-right: 5px;
+}
+
+a[href^="address"]::before {
+  content: url(./static/address.png);
+  margin-right: 5px;
+}
+
+address {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin-left: 25px;
+}
+
+.left-side {
+  background: #002E58;
+  width: 30%;
+  color: white;
+}
+
+body {
+  display: flex;
+}
+
+.college {
+margin-top: 155%;
+margin-left: 50%;
+}
+
+.highschool {
+  margin-top: 239%;
+  margin-left: 50%;
+  }
