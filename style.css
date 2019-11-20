@@ -1,12 +1,15 @@
-h1, h2 {
-  color: #002E58;
+h1,
+h2 {
+  color: #002e58;
 }
 
 h1 {
   text-align: center;
 }
 
-h2, ul, strong {
+h2,
+ul,
+strong {
   margin-left: 10px;
 }
 
@@ -42,7 +45,7 @@ p {
 }
 
 .left-side {
-  background: #002E58;
+  background: #002e58;
   width: 30%;
   color: white;
 }
@@ -52,11 +55,22 @@ body {
 }
 
 .college {
-margin-top: 155%;
-margin-left: 50%;
+  margin-top: 8.56rem;
+  margin-left: 50%;
 }
 
 .highschool {
-  margin-top: 239%;
+  margin-top: 29.87rem;
   margin-left: 50%;
-  }
+}
+
+img {
+  border-radius: 50%;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 3.12rem;
+}
+
+html {
+  font-size: 16px;
+}
