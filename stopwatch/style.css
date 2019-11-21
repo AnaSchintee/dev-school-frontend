@@ -1,0 +1,36 @@
+body {
+  background-color: #efefef;
+}
+
+.container {
+  text-align: center;
+  padding-top: 10%;
+}
+
+.counter {
+  color: #827c7c;
+  font-size: 45px;
+}
+
+button {
+  font-size: 20px;
+  color: #827c7c;
+  border: 1px #827c7c;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+button[value="Start"]:hover {
+  background-color: #17a69d;
+  color: white;
+}
+
+button[value="Stop"]:hover {
+  background-color: rgb(219, 51, 51);
+  color: white;
+}
+
+button[value="Reset"]:hover {
+  background-color: gold;
+  color: white;
+}

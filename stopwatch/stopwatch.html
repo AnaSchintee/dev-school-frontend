@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stopwatch</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- <script type="module">
+      import { execute, reset } from "./stopwatch.js";
+    </script> -->
+  </head>
+
+  <body>
+    <div class="container">
+      <h2 class="counter" id="counter">00:00:00</h2>
+      <div class="buttons">
+        <button onclick="execute()" id="execute" value="Start">Start</button>
+        <button onclick="reset()" id="reset" value="Reset">Reset</button>
+      </div>
+    </div>
+    <script type="text/javascript">
+      let state = "start";
+      let counter = 0;
+
+      function execute() {
+        if (state === "start") {
+          document.getElementById("execute").innerHTML = "Stop";
+          state = "stop";
+          document.getElementById("execute").value = "Stop";
+          render();
+        } else {
+          document.getElementById("execute").innerHTML = "Start";
+          state = "start";
+          document.getElementById("execute").value = "Start";
+          render();
+        }
+      }
+
+      function reset() {
+        state = "start";
+        counter = 0;
+        document.getElementById("counter").innerHTML = "00:00:00";
+      }
+
+      function render() {
+        if (state === "stop") {
+          setTimeout(function() {
+            counter++;
+            let mseconds = counter % 100;
+            let seconds = Math.floor(counter / 100);
+            let minutes = Math.floor(counter / 100 / 60);
+
+            if (minutes < 10) {
+              min = "0" + minutes;
+            } else if (seconds >= 60) {
+              seconds = seconds % 60;
+            } else if (seconds < 10) {
+              seconds = "0" + seconds;
+            }
+            document.getElementById("counter").innerHTML =
+              minutes + ":" + seconds + ":" + mseconds;
+            render();
+          }, 10);
+        }
+      }
+    </script>
+  </body>
+</html>
